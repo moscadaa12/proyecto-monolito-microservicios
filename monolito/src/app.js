@@ -10,7 +10,7 @@ app.get('/health', (req, res) => {
 
 app.get('/usuarios', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM usuarissss');
+        const result = await pool.query('SELECT * FROM usuarios');
         res.json(result.rows);
     } catch (error) {
         res.status(500).json({ error: 'Error al consultar usuarios' });
@@ -19,7 +19,7 @@ app.get('/usuarios', async (req, res) => {
 
 app.get('/productos', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM productosss');
+        const result = await pool.query('SELECT * FROM productos');
         res.json(result.rows);
     } catch (error) {
         res.status(500).json({ error: 'Error al consultar productos' });
@@ -28,7 +28,7 @@ app.get('/productos', async (req, res) => {
 
 app.get('/pedidos', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM pedidossss');
+        const result = await pool.query('SELECT * FROM pedidos');
         res.json(result.rows);
     } catch (error) {
         res.status(500).json({ error: 'Error al consultar pedidos' });
